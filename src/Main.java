@@ -32,6 +32,12 @@ public class Main {
 
             // player
             placement(b, playerPos, "player");
+            String result = results();
+            if (!result.isEmpty()) {
+                System.out.println(result);
+                break;
+            }
+
 
             // computer using random
             Random r = new Random();
@@ -45,8 +51,8 @@ public class Main {
             board(b);
 
             // results
-            String result = results();
-            if (result.length() > 0) {
+            result = results();
+            if (!result.isEmpty()) {
                 System.out.println(result);
                 break;
             }
